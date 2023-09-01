@@ -1,10 +1,20 @@
 
 
 ### Passo a passo
+por ssh 
+```sh
+git clone git@github.com:denison/Laravel-10--com-php-8.git app-laravel
+```
+
+
 ```sh
 cd app-laravel
 ```
 
+Entrar na Branch Correta
+```sh
+git checkout development
+```
 
 Crie o Arquivo .env
 ```sh
@@ -13,7 +23,7 @@ cp .env.example .env
 
 
 Atualize as variáveis de ambiente do arquivo .env
-```dosini
+```
 APP_NAME=NomeApp
 APP_URL=http://localhost
 
@@ -56,6 +66,15 @@ Gere a key do projeto Laravel
 ```sh
 php artisan key:generate
 ```
+
+Fora do container pode ser preciso rodar
+to usando o node 16.20.1
+```sh
+npm install 
+npm run dev
+```
+
+Importar o banco que esta na raiz do projeto
 
 
 Acesse o projeto

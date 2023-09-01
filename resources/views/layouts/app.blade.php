@@ -1,5 +1,28 @@
 <x-laravel-ui-adminlte::adminlte-layout>
+    <head>
+        <style>
+            /* Remove bullet from ajax notification */
+            .alert-ajax {
+                list-style-type: none;
+                display: none;
+            }
+            .alert-ajax {
+                list-style-type: none;
+                display: none;
+                /* margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 15px; */
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+        <!-- Select2 v4.0.13 -->
+        {{-- <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}"> --}}
+        
 
+       
+        {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css"> --}}
+        @stack('css')
+    </head>
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
             <!-- Main Header -->
@@ -63,4 +86,33 @@
             </footer>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+    {{-- <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script> --}}
+    <!-- LoadingOverlay v2.1.7 -->
+    <script src="{{ asset('js/loadingoverlay.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+     <!-- Select2 v4.0.13 -->
+     {{-- <script src="{{ asset('js/select2.min.js') }}"></script> --}}
+     
+    
+
+    <script type="text/javascript">
+        
+        // Loading overlay
+        function showLoading() {
+                $.LoadingOverlay("show", {
+                    // image            : '',
+                    imageColor       : '#ccc',
+                    // text             : customText,
+                    // textResizeFactor : 0.2,
+                    // textColor        : '#fff',
+                    background       : 'rgba(0, 0, 0, 0.5)',
+                    fade             : [200, 200],
+                });
+            }
+            function hideLoading() {
+                $.LoadingOverlay("hide");
+            }
+    </script>
+    @stack('scripts')
 </x-laravel-ui-adminlte::adminlte-layout>

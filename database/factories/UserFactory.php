@@ -18,10 +18,21 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'holding_id' => 1,
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'phone' => '233322332',
+            "zipcode" => "11347-010",
+            "address" => "Rua Ibrahin Abdalla Set El Banat",
+            "number" => "50",
+            "neighborhood" => "Jardim Rio Branco",
+            "city" => "São Vicente",
+            "state" => "SP",
+            "complement" => "Casa",
+            'is_active' => true,
+            'uuid'              => uniqid(),
             'remember_token' => Str::random(10),
         ];
     }

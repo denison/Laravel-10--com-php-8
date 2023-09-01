@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateVoucherCategoriesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('voucher_categories', function (Blueprint $table) 
+        {
+            $table->increments('id');
+            $table->integer('holding_id')->unsigned();
+            $table->foreign('holding_id')->references('id')->on('holdings');
+            $table->string('name');
+            $table->string('icon')->nullable();
+            $table->string('description')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('voucher_categories');
+    }
+}

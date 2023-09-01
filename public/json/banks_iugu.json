@@ -1,0 +1,242 @@
+[
+    {
+        "name" : "Banco do Brasil",
+        "code" : "001" 
+    },
+    {
+        "name" : "Santander",
+        "code" : "033" 
+    },
+    {
+        "name" : "Caixa Econômica",
+        "code" : "104" 
+    },
+    {
+        "name" : "Bradesco",
+        "code" : "237" 
+    },
+    {
+        "name" : "Next",
+        "code" : "237" 
+    },
+    {
+        "name" : "Itaú",
+        "code" : "341" 
+    },
+    {
+        "name" : "Banrisul",
+        "code" : "041" 
+    },
+    {
+        "name" : "Sicredi",
+        "code" : "748" 
+    },
+    {
+        "name" : "Sicoob",
+        "code" : "756" 
+    },
+    {
+        "name" : "Inter",
+        "code" : "077" 
+    },
+    {
+        "name" : "BRB",
+        "code" : "070" 
+    },
+    {
+        "name" : "Via Credi",
+        "code" : "085" 
+    },
+    {
+        "name" : "Neon/Votorantim",
+        "code" : "655" 
+    },
+    {
+        "name" : "Nubank",
+        "code" : "260" 
+    },
+    {
+        "name" : "Pagseguro",
+        "code" : "290" 
+    },
+    {
+        "name" : "Banco Original",
+        "code" : "212" 
+    },
+    {
+        "name" : "Safra",
+        "code" : "422" 
+    },
+    {
+        "name" : "Modal",
+        "code" : "746" 
+    },
+    {
+        "name" : "Banestes",
+        "code" : "021" 
+    },
+    {
+        "name" : "Unicred",
+        "code" : "136" 
+    },
+    {
+        "name" : "Money Plus",
+        "code" : "274" 
+    },
+    {
+        "name" : "Mercantil do Brasil",
+        "code" : "389" 
+    },
+    {
+        "name" : "JP Morgan",
+        "code" : "376" 
+    },
+    {
+        "name" : "Gerencianet Pagamentos do Brasil",
+        "code" : "364" 
+    },
+    {
+        "name" : "Banco C6",
+        "code" : "336" 
+    },
+    {
+        "name" : "BS2",
+        "code" : "218" 
+    },
+    {
+        "name" : "Banco Topazio",
+        "code" : "082" 
+    },
+    {
+        "name" : "Uniprime",
+        "code" : "099" 
+    },
+    {
+        "name" : "Stone",
+        "code" : "197" 
+    },
+    {
+        "name" : "Banco Daycoval",
+        "code" : "707" 
+    },
+    {
+        "name" : "Rendimento",
+        "code" : "633" 
+    },
+    {
+        "name" : "Banco do Nordeste",
+        "code" : "004" 
+    },
+    {
+        "name" : "Citibank",
+        "code" : "745" 
+    },
+    {
+        "name" : "PJBank",
+        "code" : "301" 
+    },
+    {
+        "name" : "Cooperativa Central de Credito Noroeste Brasileiro",
+        "code" : "97" 
+    },
+    {
+        "name" : "Uniprime Norte do Paraná",
+        "code" : "084" 
+    },
+    {
+        "name" : "Global SCM",
+        "code" : "384" 
+    },
+    {
+        "name" : "Cora",
+        "code" : "403" 
+    },
+    {
+        "name" : "Mercado Pago",
+        "code" : "323" 
+    },
+    {
+        "name" : "Banco da Amazonia",
+        "code" : "003" 
+    },
+    {
+        "name" : "BNP Paribas Brasil",
+        "code" : "752" 
+    },
+    {
+        "name" : "Juno",
+        "code" : "383" 
+    },
+    {
+        "name" : "Cresol",
+        "code" : "133" 
+    },
+    {
+        "name" : "BRL Trust DTVM",
+        "code" : "173" 
+    },
+    {
+        "name" : "Banco Banese",
+        "code" : "047" 
+    },
+    {
+        "name" : "Banco BTG Pactual",
+        "code" : "208" 
+    },
+    {
+        "name" : "Banco Omni",
+        "code" : "613" 
+    },
+    {
+        "name" : "Acesso Soluções de Pagamento",
+        "code" : "332" 
+    },
+    {
+        "name" : "CCR de São Miguel do Oeste",
+        "code" : "273" 
+    },
+    {
+        "name" : "Polocred",
+        "code" : "093" 
+    },
+    {
+        "name" : "Ótimo",
+        "code" : "355" 
+    },
+    {
+        "name" : "Agibank",
+        "code" : "121" 
+    },
+    {
+        "name" : "Banpará",
+        "code" : "037" 
+    },
+    {
+        "name" : "Picpay",
+        "code" : "380" 
+    },
+    {
+        "name" : "Banco Genial",
+        "code" : "125" 
+    },
+    {
+        "name" : "Banco Capital S.A",
+        "code" : "412-x" 
+    },
+    {
+        "name" : "Banco Ribeirão Preto",
+        "code" : "741" 
+    },
+    {
+        "name" : "ASAAS IP",
+        "code" : "461" 
+    },
+    {
+        "name" : "Banco Pan",
+        "code" : "623" 
+    },
+    {
+        "name" : "Neon",
+        "code" : "735" 
+    }
+]
