@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\Functions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -133,5 +134,66 @@ class Subscription extends Model
                     )
                     ->withTimestamps();
     }
+
+     /**
+     * Get card image or a default photo
+     *
+     * @return string
+     */
+    public function getCardImageAttribute()
+    {
+        return empty($this->attributes['card_image']) ? "/images/default-wide.png" : $this->attributes['card_image'];
+    }
+
+    /**
+     * Check whether card_image is default or not
+     *
+     * @return boolean
+     */
+    public function isCardImageDefault()
+    {
+        return empty($this->attributes['card_image'])?? false;
+    }
+
+    /**
+     * Get readable_created_at
+     *
+     * @return string
+     */
+    public function getReadableCreatedAtAttribute()
+    {
+        return Functions::formatDatetime($this->created_at);
+    }
+
+    /**
+     * Get readable_updated_at
+     *
+     * @return string
+     */
+    public function getReadableUpdatedAtAttribute()
+    {
+        return Functions::formatDatetime($this->updated_at);
+    }
+
+    /**
+     * Get readable_expired_at
+     *
+     * @return string
+     */
+    public function getReadableExpiredAtAttribute()
+    {
+        return Functions::formatDatetime($this->expired_at);
+    }
+
+    /**
+     * Get readable_value
+     *
+     * @return string
+     */
+    public function getReadableValueAttribute()
+    {
+        return Functions::formatCurrency($this->value);
+    }
+
 
 }

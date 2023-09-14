@@ -13,26 +13,26 @@
             <section class="content-header">
                 <div class="row" style="display: flex; align-items: center;">
                     <div class="col-sm-6">
-                        <h1 class="title-header" style="margin: 0;">{!! mb_strtoupper(\Lang::choice("tables.subscription_members", "p"), "UTF-8") !!}</h1>
+                        <h1 class="title-header" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;">{!! mb_strtoupper(\Lang::choice("tables.subscription_members", "p"), "UTF-8") !!} {{ mb_strtoupper($subscription_name) }}</h1>
                     </div>
 
                     <div class="col-sm-6">
-                        <a class="table-header-button float-right" style="margin: 0;" href="{{ route('companies.create') }}"><i class="fas fa-plus table-header-icon"> </i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
+                        <a class="table-header-button float-right" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;" href="{{ route('companies.add-subscriptions-members', [request()->company_id, request()->subscription_id]) }}"><i class="fas fa-plus table-header-icon"> </i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
                     </div>
                 </div>
             </section>
 
-            <div class="box-body">
+            <div class="box-body edit-box-body">
                 {{-- @include("companies.table") --}}
 
-                <table class="table table-bordered data-table">
+                <table class="table table-bordered data-table table-hover">
                     <thead>
                         <th>{{ Lang::get("attributes.name") }}</th>
                         <th>{{ Lang::get("attributes.expiration_date") }}</th>
                         <th>{{ Lang::get("attributes.description") }}</th>
                         {{-- <th>{{ Lang::get("attributes.owner") }}</th> --}}
                         {{-- <th>{{ Lang::get("attributes.value") }}</th> --}}
-                        {{-- <th>AÇão</th> --}}
+                        <th>Ação</th>
                     </thead>
                 </table>
             </div>
@@ -83,6 +83,7 @@
                         {data: 'user_name', name: "user_name"},
                         {data: 'expiration_date', name: "expiration_date"},
                         {data: 'description', name: "description"},
+                        {data: 'action', name: "action", orderable: false, searchable: false}
                     ]
                 })
             })

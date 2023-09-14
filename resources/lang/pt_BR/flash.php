@@ -102,5 +102,5 @@ return [
 
     'duplicated_successfully'   => 'Duplicado com sucesso!',
     'updated_successfully'      => 'Atualizado com sucesso!',
-    'deleted_successfully'      => 'Deletado com sucesso!',
+    'deleted_successfully'      => '[m] Deletado com sucesso!!                                        |[f] Deletada com sucesso!!',
 ];

@@ -11,7 +11,7 @@
             </section>
 
             <div class="box-body edit-box-body">
-                {!! Form::open(["route" => ["companies.store-subscription", request()->company_id], "files" => true]) !!}
+                {!! Form::model($subscription, ["route" => ["companies.update-subscription", [request()->company_id, request()->subscription_id]], "method" => "patch", "files" => true, 'id' => 'company_form']) !!}
                     @include("companies.fields_subscription")
                 {!! Form::close() !!}
             </div>

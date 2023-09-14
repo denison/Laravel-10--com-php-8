@@ -1,6 +1,12 @@
 <x-laravel-ui-adminlte::adminlte-layout>
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+
         <style>
+             @font-face {
+                font-family: Comfortaa;
+                /* src: url(fonts/Comfortaa.ttf); */
+            }
             /* Remove bullet from ajax notification */
             .alert-ajax {
                 list-style-type: none;
@@ -12,6 +18,76 @@
                 /* margin-left: 15px;
                 margin-right: 15px;
                 margin-bottom: 15px; */
+            }
+            .content-wrapper::before{
+                position: absolute!important;
+                left: 0!important;
+                top: 120px!important;
+                right: 0!important;
+                height: 160px!important;
+                z-index: 1!important;
+                /* background: #f39e1c!important; */
+                background: #f39e1ccf;
+                content: ''!important;
+                border-radius: 0!important;
+                left: 0!important;
+                
+            }
+            .box-primary{
+                z-index: 2;
+                position: relative;
+                top: 53px;
+            }
+
+            .main-sidebar{
+                background: white!important;
+            }
+
+            .sidebar > nav > .nav-sidebar > .nav-item a{
+                color:#d42330;
+            }
+
+            .nav-sidebar>.nav-item:hover a{
+                color: #1b212b!important;
+            }
+
+            .nav-sidebar>.nav-item:hover{
+                background-color: #f39e1ccf; 
+                border-radius: 10px;
+            }
+
+            .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
+                background-color: #f39e1ccf!important; 
+                border-radius: 10px;
+                color: #1b212b!important;
+            }
+
+            .font-weight-light{
+                color: #d42330;
+            }
+
+            [class*=sidebar-dark] .brand-link {
+                border-bottom: none!important;
+            }
+            .main-header{
+                height: 120px;
+            }
+            .edit-box-body{
+                background: white!important;
+                padding: 50px!important;
+                border-radius: 10px!important;
+                box-shadow: 2px 10px 10px 3px rgba(0,0,0, .3);
+            }
+            .table-header-button{
+                text-decoration: none;
+                color: white;
+            }
+            .table-hover tbody tr:hover{
+                background-color: #f39e1c5e;
+            }
+
+            .color-secondary{
+                color: #d42330;
             }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
@@ -44,7 +120,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                             <!-- User image -->
-                            <li class="user-header bg-primary">
+                            <li class="user-header" style="background-color: #f39e1ccf;">
                                 <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
                                     class="img-circle elevation-2" alt="User Image">
                                 <p>

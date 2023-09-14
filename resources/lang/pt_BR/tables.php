@@ -74,4 +74,5 @@ return
     'subscription_members'            => '[s] Aluno           |[p] Alunos',
     'tickets'                   => '[s] Ingresso                       |[p] Ingressos',
     'events'                   => '[s] Evento                       |[p] Eventos',
+    'students'                  => '[s] Aluno                   |[p] Alunos',
 ];

@@ -11,7 +11,7 @@
             <section class="content-header">
                 <div class="row" style="display: flex; align-items: center;">
                     <div class="col-sm-6">
-                        <h1 class="title-header" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;">{!! mb_strtoupper(\Lang::choice("tables.users", "p"), "UTF-8") !!}</h1>
+                        <h1 class="title-header" style="margin: 0;">{!! mb_strtoupper(\Lang::choice("tables.students", "p"), "UTF-8") !!}</h1>
                     </div>
 
                     {{-- <div class="col-sm-6">
@@ -24,7 +24,6 @@
                 <table class="table table-bordered data-table table-hover">
                     <thead>
                         <th>{{ Lang::get("attributes.name") }}</th>
-                        <th>{{ Lang::get("attributes.role_name") }}</th>
                         <th>{{ Lang::get("attributes.email") }}</th>
                         <th>{{ Lang::get("attributes.phone") }}</th>
                         <th>{{ Lang::get("attributes.is_active") }}</th>
@@ -49,10 +48,9 @@
                 let table = $('.data-table').dataTable({
                     processing: true,
                     serverSide: true,
-                    ajax: "{{ route('users.get-users') }}",
+                    ajax: "{{ route('users.get-clients') }}",
                     columns: [
                         {data: 'name', name: "name"},
-                        {data: 'readable_role_name', name:'readable_role_name'},
                         {data: 'email', name: "email"},
                         {data: 'phone', name: "phone"},
                         {data: 'readable_is_active', name: "readable_is_active"},

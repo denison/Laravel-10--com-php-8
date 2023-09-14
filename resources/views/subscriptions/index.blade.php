@@ -17,14 +17,12 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <a class="table-header-button float-right" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;" href="{{ route('companies.create-subscription', request()->company_id) }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
+                        <a class="table-header-button float-right" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;" href="{{ route('subscriptions.create') }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
                     </div>
                 </div>
             </section>
 
             <div class="box-body edit-box-body">
-                {{-- @include("companies.table") --}}
-
                 <table class="table table-bordered data-table table-hover">
                     <thead>
                         <th>{{ Lang::get("attributes.name") }}</th>
@@ -37,8 +35,6 @@
                     </thead>
                 </table>
             </div>
-
-            <a href="{{ route('companies.index') }}" class="btn btn-success mt-2"><i class="fas fa-arrow-circle-left"></i> Voltar</a>
         </div>
     </div>
 
@@ -70,10 +66,7 @@
 
         <script type="text/javascript">
             $(function(){
-                let companyId = @json(request()->company_id);
-                let route = "{{ route('companies.get-subscriptions', ':param1') }}";
-
-                route = route.replace(":param1", companyId);
+                let route = "{{ route('subscriptions.subscriptions') }}";
 
                 let table = $('.data-table').dataTable({
                     processing: true,

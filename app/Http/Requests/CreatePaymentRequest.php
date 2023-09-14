@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Subscription;
+use App\Models\Payment;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateSubscriptionRequest extends FormRequest
+class CreatePaymentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request
@@ -24,16 +24,21 @@ class CreateSubscriptionRequest extends FormRequest
      */
     public function rules()
     {
-        return Subscription::$rules;
+        return Payment::$rules;
     }
 
+     /**
+     * Get the validation messages that apply to the request.
+     *
+     * @return array
+     */
     public function messages()
     {
+        
         return [
             //
-            'name.required'  => 'Nome é obrigatório',
-            'value.required' => "Valor é obrigatório",
-            'company_id.required' => "É obrigatório adicionar uma empresa"
+            'company_id.required'  => 'Empresa é obrigatório',
+            'value.required' => "Valor é obrigatório"
         ];
     }
 }

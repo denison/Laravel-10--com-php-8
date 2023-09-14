@@ -3,6 +3,7 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
 @endpush
 
 @section("content")
@@ -14,26 +15,26 @@
             <section class="content-header">
                 <div class="row" style="display: flex; align-items: center;">
                     <div class="col-sm-6">
-                        <h1 class="title-header" style="margin: 0;">{!! mb_strtoupper(\Lang::choice("tables.companies", "p"), "UTF-8") !!}</h1>
+                        <h1 class="title-header" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;">{!! mb_strtoupper(\Lang::choice("tables.companies", "p"), "UTF-8") !!}</h1>
                     </div>
 
                     <div class="col-sm-6">
-                        <a class="table-header-button float-right" style="margin: 0;" href="{{ route('companies.create') }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
+                        <a class="table-header-button float-right" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;" href="{{ route('companies.create') }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
                     </div>
                 </div>
             </section>
 
-            <div class="box-body">
+            <div class="box-body edit-box-body">
                 {{-- @include("companies.table") --}}
 
-                <table class="table table-bordered data-table">
+                <table class="table table-bordered data-table table-hover">
                     <thead>
                         <th>{{ Lang::get("attributes.name") }}</th>
                         <th>Qtd de Turmas</th>
                         <th>{{ Lang::get("attributes.full_address") }}</th>
                         {{-- <th>{{ Lang::get("attributes.owner") }}</th> --}}
                         <th>{{ Lang::get("attributes.phone") }}</th>
-                        {{-- <th>AÇão</th> --}}
+                        <th>AÇão</th>
                     </thead>
                 </table>
             </div>
@@ -77,9 +78,10 @@
                     ajax: "{{ route('companies.my-companies') }}",
                     columns: [
                         {data: 'name', name: "name"},
-                        {data: 'count_subscriptions', name: "count_subscriptions"},
-                        {data: 'full_address', name: "full_address"},
-                        {data: 'phone', name: "phone"}
+                        {data: 'count_subscriptions', name: "count_subscriptions", orderable: false, searchable: false},
+                        {data: 'full_address', name: "full_address", orderable: false, searchable: false},
+                        {data: 'phone', name: "phone"},
+                        {data: 'action', name: "action", orderable: false, searchable: false}
                     ]
                 })
             })

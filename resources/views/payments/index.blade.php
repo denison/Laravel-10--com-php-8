@@ -11,12 +11,12 @@
             <section class="content-header">
                 <div class="row" style="display: flex; align-items: center;">
                     <div class="col-sm-6">
-                        <h1 class="title-header" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;">{!! mb_strtoupper(\Lang::choice("tables.users", "p"), "UTF-8") !!}</h1>
+                        <h1 class="title-header" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;">{!! mb_strtoupper(\Lang::choice("tables.payments", "p"), "UTF-8") !!}</h1>
                     </div>
 
-                    {{-- <div class="col-sm-6">
-                        <a class="table-header-button float-right" style="margin: 0;" href="{{ route('users.create') }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
-                    </div> --}}
+                    <div class="col-sm-6">
+                        <a class="table-header-button float-right" style="margin: 0; font-family: Comfortaa, Cursive; color: #d42330;" href="{{ route('payments.create') }}"><i class="fas fa-plus table-header-icon"></i> <span class="table-header-text">{!! mb_strtoupper(\Lang::get("text.add"), "UTF-8") !!}<span></a>
+                    </div>
                 </div>
             </section>
 
@@ -24,12 +24,11 @@
                 <table class="table table-bordered data-table table-hover">
                     <thead>
                         <th>{{ Lang::get("attributes.name") }}</th>
-                        <th>{{ Lang::get("attributes.role_name") }}</th>
-                        <th>{{ Lang::get("attributes.email") }}</th>
+                        <th>{{ Lang::get("attributes.value") }}</th>
+                        <th>{{ Lang::get("attributes.company_name") }}</th>
                         <th>{{ Lang::get("attributes.phone") }}</th>
-                        <th>{{ Lang::get("attributes.is_active") }}</th>
-                        <th>{{ Lang::get("attributes.birth_date") }}</th>
-                        {{-- <th>AÇão</th> --}}
+                        <th>{{ Lang::get("attributes.status_payment_id") }}</th>
+                        <th>Ação</th>
                     </thead>
                 </table>
             </div>
@@ -49,14 +48,14 @@
                 let table = $('.data-table').dataTable({
                     processing: true,
                     serverSide: true,
-                    ajax: "{{ route('users.get-users') }}",
+                    ajax: "{{ route('payments.get-payments') }}",
                     columns: [
-                        {data: 'name', name: "name"},
-                        {data: 'readable_role_name', name:'readable_role_name'},
-                        {data: 'email', name: "email"},
-                        {data: 'phone', name: "phone"},
-                        {data: 'readable_is_active', name: "readable_is_active"},
-                        {data: 'readable_birth_date', name: "readable_birth_date"}
+                        {data: 'user_name', name: "user_name"},
+                        {data: 'value', name:'value'},
+                        {data: 'company_name', name: "company_name"},
+                        {data: 'user_phone', name: "user_phone"},
+                        {data: 'status_payment_name', name: "status_payment_name"},
+                        {data: 'action', name: "action", orderable: false, searchable: false}
                     ]
                 })
             })

@@ -11,8 +11,8 @@
             </section>
 
             <div class="box-body edit-box-body">
-                {!! Form::open(["route" => ["companies.store-subscription", request()->company_id], "files" => true]) !!}
-                    @include("companies.fields_subscription")
+                {!! Form::open(["route" => ["subscriptions.store", request()->company_id], "files" => true]) !!}
+                    @include("subscriptions.fields")
                 {!! Form::close() !!}
             </div>
         </div>

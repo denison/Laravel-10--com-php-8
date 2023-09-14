@@ -6,15 +6,17 @@
     </div>
    
   
-    {{ Form::hidden('holding_id', 1) }}
-    {{ Form::hidden('is_active', 1) }}
-    {{ Form::hidden('is_anchor', 0) }}
-    {{ Form::hidden('color_primrimary', "#f39e1c") }}
-    {{ Form::hidden('color_secondary', "#1b212b") }}
-    {{ Form::hidden('color_tertiary', "d42330") }}
-    {{ Form::hidden('user_id', auth()->user()->id) }}
-    {{ Form::hidden('slug', bin2hex(random_bytes(3))) }}
-    {{ Form::hidden('working_time', null) }}
+    @if (!isset($company))
+        {{ Form::hidden('holding_id', 1) }}
+        {{ Form::hidden('is_active', 1) }}
+        {{ Form::hidden('is_anchor', 0) }}
+        {{ Form::hidden('color_primrimary', "#f39e1c") }}
+        {{ Form::hidden('color_secondary', "#1b212b") }}
+        {{ Form::hidden('color_tertiary', "d42330") }}
+        {{ Form::hidden('user_id', auth()->user()->id) }}
+        {{ Form::hidden('slug', bin2hex(random_bytes(3))) }}
+        {{ Form::hidden('working_time', null) }}
+    @endif
 
 
     {{-- Name Field --}}

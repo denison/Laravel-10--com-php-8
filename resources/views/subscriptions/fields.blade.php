@@ -1,5 +1,16 @@
 @push('css')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<style>
+    .select2-selection__rendered {
+        line-height: 31px !important;
+    }
+    .select2-container .select2-selection--single {
+        height: 40px !important;
+    }
+    .select2-selection__arrow {
+        height: 34px !important;
+    }
+</style>
 @endpush
 <div class="row container-fluid px-4">
     <div class="col-lg-12 alert-ajax"></div>
@@ -7,7 +18,11 @@
         <h4><b>Dados Cadastrais</b></h4>
     </div>
 
-    {{ Form::hidden('company_id', request()->company_id) }}
+     {{-- Company Id Field --}}
+     <div class="form-group col-md-12">
+        {!! Form::label("company_id", \Lang::get("attributes.company_id").":") !!}
+        {!! Form::select("company_id", ["" => "Selecionar"] + $companies, null, ["class" => "form-control select2"]) !!}
+    </div>
 
     {{-- Name Field --}}
     <div class="form-group col-md-6">
@@ -85,6 +100,24 @@
     <div class="expiration_type_fields col-lg-12">
     </div>
 
+    <div class="form-group col-md-12">
+        {!! Form::label("is_active", \Lang::get("attributes.is_active").":") !!}
+        <div class="icheck">
+            <label>
+                {!! Form::radio('is_active', 1, true) !!}
+                <span>{!! \Lang::get('text.yes') !!}</span>
+            </label>
+        </div>
+        <div class="icheck">
+            <label>
+                {!! Form::radio('is_active', 0, false) !!}
+                <span>{!! \Lang::get('text.no') !!}</span>
+            </label>
+        </div>
+    </div>
+
+   
+
     {{-- Card Image Field --}}
     <div class="form-group col-sm-12" style="margin-top: 25px">
         {!! Form::label('card_image', \Lang::get('attributes.card_image').':') !!}
@@ -113,7 +146,7 @@
     {{-- Submit Field --}}
     <div class="form-group col-sm-12 no-margin">
         {!! Form::submit(\Lang::get("text.save"), ["class" => "btn btn-primary"]) !!}
-        <a href="{{ route('companies.index') }}" class="btn btn-default"> {{ \Lang::get("text.cancel") }}</a>
+        <a href="{{ route('subscriptions.index') }}" class="btn btn-default"> {{ \Lang::get("text.cancel") }}</a>
     </div>
 
 </div>
